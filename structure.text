@@ -1,0 +1,25 @@
+project SAS
+
+steps-
+1. create html to get information of students.
+2. take that students form html and store it into localstorage.
+3. pass student data from html to js.
+4. pass student data from js to localstorage.
+
+for displaying students-
+1. make of html for data.
+2. make structure for marking attendance.(present,absent)
+3.take students list from localstorage into js.
+4. add students into html by using js.
+
+for marking attendance
+1. present - function - db - present with date .
+2. absent - function - db - absent with date .
+
+INPUT ADD STUDENT NAME
+1. Vibha - [present] [absent]
+2.  Sneha - [present] [absent]
+
+               Vibha   Sneha   Ankita
+1. 23/02/2023 present  absent  present
+2. 24/02/2023 present  absent  present          
