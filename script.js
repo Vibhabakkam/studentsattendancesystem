@@ -19,7 +19,7 @@ function displayStudentlist(){
     var divFromHTML = document.getElementById("displayStudentlist")
     console.log(divFromHTML,"divFromHTML")
 
-    //looping  over userlist to create 
+    //looping  over userlist to create perfect structure
     var students = [];
     for (var i = 0; i< StudentList.length;i++){
         students += `<div><p>${StudentList[i]}</p></div>`
