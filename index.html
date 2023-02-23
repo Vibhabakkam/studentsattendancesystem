@@ -6,20 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAS</title>
     <style>
-        div{
+        *{
+            text-align: center;
+        }
+        #gettingInfo{
           width: 50%;
           margin: auto;
           border: 1px solid red;
           height: 100px;
           text-align: center;
         }
+        #markingAttendance{
+            width: 60%;
+          margin: auto;
+          border: 1px solid red;
+        }
+        #displayStudentlist{
+            width: 80%;
+          margin: auto;
+          border: 1px solid red;
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div id="gettingInfo">
         <label for=""> ADD STUDENTS</label><br>
         <input id="addingstudents" type="text" placeholder="Add students here"> <br>
         <button onclick="addstudent()"> Add Students</button>
+    </div>
+    <h2>Mark Attendance</h2>
+    <div id="markingAttendance">
+
+    </div>
+    <h2>Attendance</h2>
+    <div id="displayStudentlist">
+
     </div>
     <script src="script.js"></script>
 </body>
