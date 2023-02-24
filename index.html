@@ -1,56 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://kit.fontawesome.com/06489297db.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAS</title>
     <style>
         *{
-            text-align: center;
+            margin: 0%;
+            padding: 0%;
         }
         #headdiv{
-          height: 80px;
+          height: 95px;
+        }
+        #headdiv>div:nth-child(1){
+          background-color:#fc9b2f;
+          height: 50px;
+          font-size: 25px;
+          color: white;
+          padding-top: 20px;
           border: 1px solid black;
         }
+        #headdiv>div:nth-child(1)>p{
+          margin-left: 100px;
+        }
+        #headdiv>div:nth-child(2){
+          color: #3a7fba;
+        }
+        #headdiv>div:nth-child(2)>div{
+          margin-left: 50px;
+        }
         #gettingInfo{
-          width: 50%;
-          margin: auto;
-          border: 1px solid red;
-          height: 100px;
+          width: 100%;
+          padding-top: 20px;
+          margin-top: 30px;
+          background-color: #d9edf7 ;
+          height: 50px;
           text-align: center;
+          font-size: 22px;
+        }
+        #gettingInfo input{
+          height: 30px;
+          width: 400px;
+          font-size: 20px;
+        }
+        #gettingInfo button{
+          height: 30px;
+          width: 120px;
+          font-size: 17px;
+          background-color: #449d44;
+          color: white;
         }
         #markingAttendance{
             width: 60%;
-          margin: auto;
-          border: 1px solid red;
+          margin-left: 100px;
+          margin-top: 30px;
+          border: 1px solid black;
+          font-size: 17px;
+          padding-left: 70px;
         }
         #displayStudentlist{
-            width: 80%;
-          margin: auto;
-          border: 1px solid red;
+            width: 60%;
+            margin-top: 30px;
+            margin-left: 100px;
+          border: 1px solid black;
+          font-size: 17px;
+          padding-left: 70px;
         }
+        #mark{
+          margin-top: 30px;
+        }
+       
     </style>
 </head>
 <body>
   <div id="headdiv">
         <div>
-          STUDENT ATTENDANCE SYSTEM
+          <p>STUDENT ATTENDANCE SYSTEM</p>
         </div>
         <div>
-          
+          <div>
+            <i class="fa-solid fa-house"></i>
+            Home
+          </div>
         </div>
   </div>
     <div id="gettingInfo">
-        <label for=""> ADD STUDENTS</label><br>
-        <input id="addingstudents" type="text" placeholder="Add students here"> <br>
-        <button onclick="addstudent()"> Add Students</button>
+        <label for=""> ADD STUDENTS</label>
+        <input id="addingstudents" type="text" placeholder="Add students here">
+        <button onclick="addstudent()"> + Add Students</button>
     </div>
-    <h2>Mark Attendance</h2>
+    <div id="mark"><h2><u>Mark Attendance</u></h2></div>
     <div id="markingAttendance">
-
     </div>
-    <h2>Attendance</h2>
+    <div><h2><u>Attendance</u></h2></div>
     <div id="displayStudentlist">
 
     </div>
