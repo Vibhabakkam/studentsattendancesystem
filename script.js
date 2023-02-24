@@ -22,7 +22,8 @@ function displayStudentlist(){
     //looping  over userlist to create perfect structure
     var students = [];
     for (var i = 0; i< StudentList.length;i++){
-        students += `<div><p>${StudentList[i]}</p></div>`
+        students += `<div><p>${StudentList[i]}</p>
+        </div>`
     }
 
     console.log(students,"students")
