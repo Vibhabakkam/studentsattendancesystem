@@ -5,10 +5,13 @@ function addstudent(){
 
     var StudentList = JSON.parse(localStorage.getItem("StudentList")) || [];
 
-    StudentList.push(studentName)
+    StudentList.push({nameofstudent : studentName, attendance : []} )
 
     localStorage.setItem("StudentList", JSON.stringify(StudentList));
-}
+    document.getElementById("addingstudents").value ="";
+    markingAttendance();
+    displayStudentlist();
+} 
 
 function displayStudentlist(){
     //taking data from storage
@@ -22,7 +25,7 @@ function displayStudentlist(){
     //looping  over userlist to create perfect structure
     var students = [];
     for (var i = 0; i< StudentList.length;i++){
-        students += `<div><p>${StudentList[i]}</p>
+        students += `<div><p>${StudentList[i].nameofstudent}</p>
         </div>`
     }
 
@@ -31,6 +34,13 @@ function displayStudentlist(){
 } 
 displayStudentlist()
 
+function getRealTime(){
+    var dateAndTime = new Date();
+    var date = dateAndTime.toJSON().slice(0,10);
+    var addDate = document.getElementById("datehere");
+    addDate.innerText = date;
+}
+getRealTime();
 
 function markingAttendance(){
     var StudentList = JSON.parse(localStorage.getItem('StudentList'))
@@ -41,10 +51,23 @@ function markingAttendance(){
 
     var students = [];
     for (var i = 0; i< StudentList.length;i++){
-        students += `<div><p>${StudentList[i]}</p></div>`
+        students += `<div id="presentdiv" ><p>${StudentList[i].nameofstudent}</p><p><i onclick="present(${i})" class="fa-solid fa-check"></i></p><p><i onclick="absent(${i})" class="fa-solid fa-xmark"></i></p></div>`
     }
 
     console.log(students,"students")
     divFromHTML.innerHTML = students;
 } 
-markingAttendance()
+markingAttendance();
+function present(index){
+   console.log("index",index)
+   var dateAndTime = new Date();
+    var date = dateAndTime.toJSON().slice(0,10);
+
+}
+
+function absent(index){
+    alert("working on absent")
+    var dateAndTime = new Date();
+     var date = dateAndTime.toJSON().slice(0,10);
+ 
+ }
