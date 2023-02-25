@@ -62,12 +62,53 @@ function present(index){
    console.log("index",index)
    var dateAndTime = new Date();
     var date = dateAndTime.toJSON().slice(0,10);
+    console.log(date,"date here")
 
+     var StudentListFromLS = JSON.parse(localStorage.getItem("StudentList"))
+     var user = StudentListFromLS[index];
+     var flage = false;
+     for (var i=0; i< user.attendance.length; i++){
+        if (!!user.attendance[i][date]) {
+            flage = true;
+        }
+     }
+
+     if (flage === false){
+        var obj = {};
+        obj [date] = "present"
+        user.attendance.push(obj)
+        localStorage.setItem("StudentList",JSON.stringify(StudentListFromLS))
+     }
+
+     else {
+        alert('Already Marked')
+     }
+    
 }
 
 function absent(index){
-    alert("working on absent")
+    // alert("working on absent")
     var dateAndTime = new Date();
      var date = dateAndTime.toJSON().slice(0,10);
- 
+     console.log(date,"date here")
+
+     var StudentListFromLS = JSON.parse(localStorage.getItem("StudentList"))
+     var user = StudentListFromLS[index];
+     var flage = false;
+     for (var i=0; i< user.attendance.length; i++){
+        if (!!user.attendance[i][date]) {
+            flage = true;
+        }
+     }
+
+     if (flage === false){
+        var obj = {};
+        obj [date] = "absent"
+        user.attendance.push(obj)
+        localStorage.setItem("StudentList",JSON.stringify(StudentListFromLS))
+     }
+
+     else {
+        alert('Already Marked')
+     }
  }
