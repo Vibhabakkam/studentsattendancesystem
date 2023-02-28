@@ -157,8 +157,9 @@ function displayingStudentsAttendance() {
 
         }
     }
-    var finalArrayWithAtt = [];
-    var settingDates = ['2023-02-25']
+}
+    var finalArrayWithAtt = [[],[],[],[],[]];
+    var settingDates = ['2023-02-25', "2023-02-26" , "2023-02-28"]
     for (var i = 0; i < dataFromLs.length; i++) {
         // console.log(dataFromLs[i].attendance,"heree");
         if (dataFromLs[i].attendance.length) {
@@ -166,13 +167,13 @@ function displayingStudentsAttendance() {
                 for (var k = 0; k < settingDates.length; k++) {
                     if (dataFromLs[i].attendance[j][settingDates[k]]) {
                         // console.log((dataFromLs[i].attendance[j][settingDates[k]]), dataFromLs[i].nameOfStudent, dd[k])
-                        finalArrayWithAtt += `<div>${dataFromLs[i].attendance[j][settingDates[k]]}</div>`;
+                        finalArrayWithAtt [k] [settingDates[k]] += `<div>${dataFromLs[i].attendance[j][settingDates[k]]}</div>`;
                     }
                 }
             }
-        } else {
-            finalArrayWithAtt += `<div>No data</div>`;
-        }
+        // } else {
+        //  finalArrayWithAtt += `<div>No data</div>`;
+        // }
     }
     // console.log(check, 'check')
     for25.innerHTML = finalArrayWithAtt;
